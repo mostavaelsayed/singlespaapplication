@@ -1,3 +1,4 @@
+import { getCurrentUser } from "@myo/authentication";
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <section>{getCurrentUser()?.name} is mounted!</section>;
 }

@@ -47,8 +47,11 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@myo/root-config": "//localhost:9000/myo-root-config.js"
+        "react": "https://unpkg.com/react@18/umd/react.production.min.js", 
+        "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js", 
+        "@myo/root-config": "//localhost:9000/myo-root-config.js",
+        "@myo/clients": "http://localhost:8080/myo-clients.js",
+        "@myo/authentication":"http://localhost:8081/myo-authentication.js"
       }
     }
   </script>
@@ -77,6 +80,6 @@
   <script>
     System.import('@myo/root-config');
   </script>
-  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <import-map-overrides-full  dev-libs></import-map-overrides-full>
 </body>
 </html>
